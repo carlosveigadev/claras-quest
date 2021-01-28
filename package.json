@@ -7,6 +7,7 @@
   "author": "Carlos Veiga",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "6",
     "babel-eslint": "10.1.x",
     "babel-loader": "^7.0.0",
     "eslint": "6.8.x",
@@ -16,6 +17,7 @@
     "webpack": "^3.0.0"
   },
   "dependencies": {
+    "stylelint": "^13.9.0",
     "stylelint-config-standard": "20.0.x",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "3.17.x"
