@@ -1,6 +1,5 @@
 import 'phaser';
-
-import { SimpleScene } from './scenes/simple-scene';
+import SimpleScene from './scenes/simple-scene';
 
 const gameConfig = {
   width: 680,
@@ -8,4 +7,7 @@ const gameConfig = {
   scene: SimpleScene,
 };
 
-new Phaser.Game(gameConfig);
+document.addEventListener('DOMContentLoaded', () => {
+  const phaserInit = new Phaser.Game(gameConfig);
+  phaserInit();
+});

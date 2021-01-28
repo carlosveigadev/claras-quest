@@ -5,7 +5,8 @@
   "repository": "https://github.com/wrakc/claras-quest.git",
   "author": "Carlos Veiga",
   "scripts": {
-    "start": "webpack-cli serve --mode development"
+    "start": "webpack",
+    "server": "webpack-cli serve --mode development"
   },
   "license": "MIT",
   "devDependencies": {
