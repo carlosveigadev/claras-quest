@@ -1,0 +1,9 @@
+{
+  "name": "claras-quest",
+  "version": "1.0.0",
+  "description": "Platform game such as the turn-based RPG game built with Phaser library.",
+  "main": "index.js",
+  "repository": "https://github.com/wrakc/claras-quest.git",
+  "author": "Carlos Veiga",
+  "license": "MIT"
+}
