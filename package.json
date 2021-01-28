@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/wrakc/claras-quest.git",
   "author": "Carlos Veiga",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
 }
