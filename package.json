@@ -4,24 +4,30 @@
   "description": "Platform game such as the turn-based RPG game built with Phaser library.",
   "repository": "https://github.com/wrakc/claras-quest.git",
   "author": "Carlos Veiga",
+  "scripts": {
+    "start": "webpack-cli serve --mode development"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-core": "6",
     "babel-eslint": "10.1.x",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^7.0.0",
     "eslint": "6.8.x",
     "eslint-config-airbnb-base": "14.1.x",
     "eslint-plugin-import": "2.20.x",
     "jest": "^26.6.3",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.0.0"
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "phaser": "^3.0.0",
     "stylelint": "^13.9.0",
     "stylelint-config-standard": "20.0.x",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "3.17.x"
+    "stylelint-scss": "3.17.x",
+    "write-file-webpack-plugin": "^4.5.1"
   }
 }
