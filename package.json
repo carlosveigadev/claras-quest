@@ -7,6 +7,15 @@
   "author": "Carlos Veiga",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "10.1.x",
+    "eslint": "6.8.x",
+    "eslint-config-airbnb-base": "14.1.x",
+    "eslint-plugin-import": "2.20.x",
     "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x"
   }
 }
