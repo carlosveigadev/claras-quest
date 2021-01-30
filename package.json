@@ -1,34 +1,46 @@
 {
-  "name": "claras-quest",
-  "version": "1.0.0",
-  "description": "Platform game such as the turn-based RPG game built with Phaser library.",
-  "repository": "https://github.com/wrakc/claras-quest.git",
-  "author": "Carlos Veiga",
+  "name": "phaser3-project-template",
+  "version": "1.1.2",
+  "description": "A Phaser 3 Project Template",
+  "main": "src/index.js",
   "scripts": {
-    "start": "webpack",
-    "server": "webpack-cli serve --mode development"
+    "build": "webpack --config webpack/prod.js ",
+    "start": "webpack-dev-server --config webpack/base.js --open"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/photonstorm/phaser3-project-template.git"
+  },
+  "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
   "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "bugs": {
+    "url": "https://github.com/photonstorm/phaser3-project-template/issues"
+  },
+  "homepage": "https://github.com/photonstorm/phaser3-project-template#readme",
   "devDependencies": {
-    "babel-core": "6",
-    "babel-eslint": "10.1.x",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.7.0",
-    "copy-webpack-plugin": "^7.0.0",
-    "eslint": "6.8.x",
-    "eslint-config-airbnb-base": "14.1.x",
-    "eslint-plugin-import": "2.20.x",
-    "jest": "^26.6.3",
-    "webpack": "^5.18.0",
-    "webpack-cli": "^4.4.0",
-    "webpack-dev-server": "^3.11.2"
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^3.1.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.17.2",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "phaser": "^3.0.0",
-    "stylelint": "^13.9.0",
-    "stylelint-config-standard": "20.0.x",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "3.17.x",
-    "write-file-webpack-plugin": "^4.5.1"
+    "phaser": "^3.50.0"
   }
 }
