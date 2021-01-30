@@ -1,11 +1,6 @@
 import Phaser from 'phaser';
 import Preload from './js/preload';
-
-class MyGame extends Phaser.Scene {
-  constructor() {
-    super('MyGame');
-  }
-}
+import BootScene from './js/boot';
 
 const config = {
   type: Phaser.AUTO,
@@ -23,9 +18,10 @@ const config = {
       debug: false,
     },
   },
-  scene: Preload,
+  scene: [Preload, BootScene],
 };
 
 
 const game = new Phaser.Game(config);
-game();
+game.scene.add('preLoadScene', new Preload());
+game.scene.start('preLoadScene');
