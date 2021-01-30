@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import logoImg from './assets/logo.png';
 
 class MyGame extends Phaser.Scene {
   constructor() {
@@ -7,7 +6,7 @@ class MyGame extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('logo', logoImg);
+    this.load.image('logo', 'src/assets/logo.png');
   }
 
   create() {
@@ -18,7 +17,6 @@ class MyGame extends Phaser.Scene {
       y: 450,
       duration: 2000,
       ease: 'Power2',
-      yoyo: true,
       loop: -1,
     });
   }
@@ -26,11 +24,23 @@ class MyGame extends Phaser.Scene {
 
 const config = {
   type: Phaser.AUTO,
-  parent: 'phaser-example',
-  width: 800,
-  height: 600,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    parent: 'content',
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: 800,
+    height: 600,
+  },
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 300 },
+      debug: false,
+    },
+  },
   scene: MyGame,
 };
+
 
 const game = new Phaser.Game(config);
 game();
