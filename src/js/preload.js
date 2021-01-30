@@ -8,7 +8,7 @@ export default class Preload extends Phaser.Scene {
       x: null,
       y: null,
       width: 300,
-      heigh: 50,
+      height: 50,
       padding: 10,
       box: null,
       bar: null,
@@ -39,8 +39,8 @@ export default class Preload extends Phaser.Scene {
         });
         this.box.fillStyle(0x5946B2);
         this.box.fillRect(250, this.y, this.width, this.height);
-        this.loadingText.setPosition(325, (y - this.height / 2) - 40, 0);
 
+        this.loadingText.setPosition(325, (y - this.height / 2) - 40, 0);
         this.percentageText.setPosition(400, y + this.height / 2, 0);
         this.percentageText.setOrigin(0.5, 0.5);
       },
@@ -55,6 +55,7 @@ export default class Preload extends Phaser.Scene {
             this.height - (this.padding * 2),
           );
         }
+        // console.log(this.completeValue);
         this.percentageText.setText(`${this.completeValue === null ? '0%' : this.completeValue * 100}%`);
       },
       step() {
@@ -63,7 +64,6 @@ export default class Preload extends Phaser.Scene {
       },
     };
     this.progressBar.init(this, this.cameras.main.width / 2, this.cameras.main.height / 2);
-    console.log(this.progressBar.init);
     this.progressBar.render();
     this.load.scenePlugin('WebpackLoader', WebpackLoader, 'loader', 'loader');
   }
@@ -75,6 +75,7 @@ export default class Preload extends Phaser.Scene {
     this.progressBar.loadedCount = 0;
 
     this.loader.systems.events.on('load', () => {
+      console.log('loading');
       this.progressBar.step();
       this.progressBar.render();
     });
