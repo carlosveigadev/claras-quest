@@ -1,68 +1,85 @@
-// import Phaser from 'phaser';
-
-// class Preload extends Phaser.Scene {
-//   preload() {
-//     this.load.image('logo', 'src/assets/logo.png');
-//     this.load.spritesheet('dinoBoss', 'src/assets/sprites/boss_dino.png', {
-//       frameWidth: 63.66,
-//       frameHeight: 60,
-//     });
-//     this.load.spritesheet('dino', 'src/assets/sprites/dinos.png', {
-//       frameWidth: 36,
-//       frameHeight: 35,
-//     });
-//     this.load.spritesheet('eggs', 'src/assets/sprites/eggs.png', {
-//       frameWidth: 68,
-//       frameHeight: 70,
-//     });
-//     this.load.spritesheet('girl', 'src/assets/sprites/girl.png', {
-//       // frameWidth: 68,
-//       // frameHeight: 70,
-//     });
-//     this.load.spritesheet('girlBow', 'src/assets/sprites/girl_with_bow.png', {
-//       // frameWidth: 68,
-//       // frameHeight: 70,
-//     });
-//     this.load.spritesheet('girlSword', 'src/assets/sprites/girl_with_sword.png', {
-//       // frameWidth: 68,
-//       // frameHeight: 70,
-//     });
-//     this.load.spritesheet('girlWand', 'src/assets/sprites/girl_with_wand.png', {
-//       // frameWidth: 68,
-//       // frameHeight: 70,
-//     });
-//   }
-
-//   create() {
-//     const logo = this.add.image(400, 300, 'logo');
-//     logo.displayHeight = 600;
-//     logo.displayWidth = 800;
-
-//     // this.dinoBoss = this.add.sprite(400, 300, 'eggs');
-//     // this.anims.create({
-//     //   key: 'eggs',
-//     //   frames: this.anims.generateFrameNumbers('eggs'),
-//     //   frameRate: 1,
-//     //   repeat: -1,
-//     // });
-//     // this.dinoBoss.play('eggs');
-//   }
-// }
+import Phaser from 'phaser';
 import WebpackLoader from 'phaser-webpack-loader';
 import AssetManifest from '../AssetManifest';
 
 export default class Preload extends Phaser.Scene {
   preload() {
+    this.progressBar = {
+      x: null,
+      y: null,
+      width: 300,
+      heigh: 50,
+      padding: 10,
+      box: null,
+      bar: null,
+      loadingFontSize: 30,
+      percentageFontSize: null,
+      loadingText: null,
+      completeValue: null,
+
+      init(scene, x, y) {
+        this.x = x;
+        this.y = y;
+        this.percentageFontSize = this.loadingFontSize / 2;
+        this.box = scene.add.graphics();
+        this.bar = scene.add.graphics();
+        this.loadingText = scene.make.text({
+          text: 'Loading...',
+          style: {
+            font: `${this.loadingFontSize}px monospace`,
+            fill: '#ffffff',
+          },
+        });
+        this.percentageText = scene.make.text({
+          text: '100%',
+          style: {
+            font: `${this.percentageFontSize}px monospace`,
+            fill: '#000000',
+          },
+        });
+        this.box.fillStyle(0x5946B2);
+        this.box.fillRect(250, this.y, this.width, this.height);
+        this.loadingText.setPosition(325, (y - this.height / 2) - 40, 0);
+
+        this.percentageText.setPosition(400, y + this.height / 2, 0);
+        this.percentageText.setOrigin(0.5, 0.5);
+      },
+      render() {
+        this.bar.clear();
+        this.bar.fillStyle(0xffffff, 0.8);
+        if (this.completeValue != null && this.completeValue > 0) {
+          this.bar.fillRect(
+            250 + this.padding,
+            this.y + this.padding,
+            (this.width * this.completeValue) - (this.padding * 2),
+            this.height - (this.padding * 2),
+          );
+        }
+        this.percentageText.setText(`${this.completeValue === null ? '0%' : this.completeValue * 100}%`);
+      },
+      step() {
+        this.loadedCount += this.loadedCount;
+        this.completeValue = this.loadedCount / this.fileCount;
+      },
+    };
+    this.progressBar.init(this, this.cameras.main.width / 2, this.cameras.main.height / 2);
+    console.log(this.progressBar.init);
+    this.progressBar.render();
     this.load.scenePlugin('WebpackLoader', WebpackLoader, 'loader', 'loader');
   }
 
   create() {
-    this.loader.systems.events.on('load', (file) => {
-      console.log('File loaded!', file);
+    this.progressBar.fileCount = Object.keys(AssetManifest).reduce(
+      (r, k) => r.concat(AssetManifest[k]), [],
+    ).length;
+    this.progressBar.loadedCount = 0;
+
+    this.loader.systems.events.on('load', () => {
+      this.progressBar.step();
+      this.progressBar.render();
     });
     this.loader.start(AssetManifest);
     this.loader.load().then(() => {
-      console.log('Done Loading');
       this.scene.start('BootScene');
     });
   }
