@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import merge from 'webpack-merge';
-import TerserPlugin from 'terser-webpack-plugin';
-import base from './base';
+const merge = require('webpack-merge');
+const TerserPlugin = require('terser-webpack-plugin');
+const base = require('./base');
 
-export default merge(base, {
+module.exports = merge(base, {
   mode: 'production',
   output: {
     filename: 'bundle.min.js',

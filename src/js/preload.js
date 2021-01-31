@@ -55,11 +55,10 @@ export default class Preload extends Phaser.Scene {
             this.height - (this.padding * 2),
           );
         }
-        // console.log(this.completeValue);
-        this.percentageText.setText(`${this.completeValue === null ? '0%' : this.completeValue * 100}%`);
+        this.percentageText.setText(`${this.completeValue === null ? '0' : Math.round(this.completeValue) * 100}%`);
       },
       step() {
-        this.loadedCount += this.loadedCount;
+        this.loadedCount += 1;
         this.completeValue = this.loadedCount / this.fileCount;
       },
     };
@@ -75,7 +74,6 @@ export default class Preload extends Phaser.Scene {
     this.progressBar.loadedCount = 0;
 
     this.loader.systems.events.on('load', () => {
-      console.log('loading');
       this.progressBar.step();
       this.progressBar.render();
     });
