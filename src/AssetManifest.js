@@ -14,6 +14,11 @@ const AssetManifest = {
     'Tilesheet-water.png',
     'Tilesheets-nature.png',
   ],
+  audio: [
+    'boot.mp3',
+    'fight.mp3',
+    'world.mp3',
+  ],
 };
 
 export default AssetManifest;
