@@ -23,5 +23,4 @@ const config = {
 
 
 const game = new Phaser.Game(config);
-game.scene.add('preLoadScene', new Preload());
-game.scene.start('preLoadScene');
+game();
