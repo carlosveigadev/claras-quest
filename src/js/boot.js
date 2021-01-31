@@ -16,36 +16,47 @@ class BootScene extends Phaser.Scene {
     this.button = {
       x: null,
       y: null,
-      width: null,
-      height: null,
-      box: null,
       text: null,
-      init(x, y, message, scene, width, height) {
+      init(x, y, message, scene) {
         this.x = x;
         this.y = y;
-        this.width = width;
-        this.height = height;
+        this.bgBox = scene.add.graphics();
         this.box = scene.add.graphics();
-        this.box.fillRoundedRect(this.x, this.y, this.width, this.height, 10);
-        this.box.fillStyle(0x5946B2);
-        this.text = scene.make.text({
-          text: message,
-          style: {
-            font: '25px monospace',
-            fill: '#fff',
-          },
+        this.text = scene.add.text(this.x, this.y, message, {
+          fill: '#fff',
+          fontFamily: 'monoscape',
+          fontSize: 30,
         });
-        this.text.setPosition(this.x + (this.x / 10), this.y + 10, 0);
+        this.text.setPadding(25, 15, 25, 15);
+        this.text.setX(this.x - (this.text.width / 2));
+        this.bgBox.fillRoundedRect(
+          this.x - (this.text.width / 2) + 3,
+          this.y - 3,
+          this.text.width,
+          this.text.height,
+          10,
+        );
+        this.bgBox.fillStyle(0x5946B2);
+        this.box.fillRoundedRect(
+          this.x - (this.text.width / 2),
+          this.y,
+          this.text.width,
+          this.text.height,
+          10,
+        );
+        this.box.fillStyle(0x45feff);
+        this.text.setInteractive();
+        this.text.on('pointerover', () => { console.log(this.text.width); });
       },
     };
 
 
     this.logo.init(this);
-    this.button.init(325, 200, 'Start', this, 150, 50);
-    this.button.init(290, 200 + 75, 'How to Play', this, 225, 50);
-    this.button.init(325, 200 + 150, 'Sound', this, 150, 50);
-    this.button.init(315, 200 + 225, 'Credits', this, 170, 50);
-    this.button.init(325, 200 + 300, 'Scores', this, 150, 50);
+    this.button.init(400, 200, 'Start', this);
+    this.button.init(400, 200 + 75, 'How to Play', this);
+    this.button.init(400, 200 + 150, 'Sounds', this);
+    this.button.init(400, 200 + 225, 'Credits', this);
+    this.button.init(400, 200 + 300, 'Scores', this);
   }
 }
 
