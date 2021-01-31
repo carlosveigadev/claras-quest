@@ -55,7 +55,7 @@ export default class Preload extends Phaser.Scene {
             this.height - (this.padding * 2),
           );
         }
-        this.percentageText.setText(`${this.completeValue === null ? '0' : Math.round(this.completeValue) * 100}%`);
+        this.percentageText.setText(this.completeValue === null ? '0%' : `${Math.round(this.completeValue * 100)}%`);
       },
       step() {
         this.loadedCount += 1;
