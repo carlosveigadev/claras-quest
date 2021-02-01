@@ -58,7 +58,7 @@ export default class Preload extends Phaser.Scene {
       },
       step() {
         this.loadedCount += 1;
-        this.completeValue = this.loadedCount / this.fileCount;
+        this.completeValue = this.loadedCount / this.loadedCount;
       },
     };
     this.progressBar.init(this, this.cameras.main.width / 2, this.cameras.main.height / 2);

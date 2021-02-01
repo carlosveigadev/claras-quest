@@ -1,0 +1,736 @@
+{
+    "frames": [
+        {
+            "filename": "dinos_0",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_1",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_2",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_3",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_4",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_5",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_6",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_7",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_8",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_9",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_10",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_11",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_12",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_13",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_14",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_15",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_16",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_17",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_18",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_19",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_20",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_21",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_22",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_23",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_24",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_25",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_26",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_27",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_28",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_29",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_30",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_31",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_32",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_33",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_34",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_35",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_36",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_37",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_38",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_39",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_40",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_41",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_42",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 0,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_43",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 36,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_44",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 72,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_45",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 108,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_46",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 144,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_47",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 180,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_48",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 216,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_49",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_50",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 36
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_51",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 72
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_52",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 108
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_53",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 144
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_54",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "dinos_55",
+            "frame": {
+                "w": 36,
+                "h": 36,
+                "x": 252,
+                "y": 216
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
