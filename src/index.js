@@ -20,11 +20,10 @@ const config = {
     },
   },
   scene: [
-    // Preload,
-    // BootScene,
-    // WorldScene,
-    BattleScene,
-    UIScene],
+    Preload,
+    BootScene,
+    WorldScene,
+  ],
 };
 
 const game = new Phaser.Game(config);
