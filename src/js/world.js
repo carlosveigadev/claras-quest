@@ -125,4 +125,4 @@ const WorldScene = new Phaser.Class({
 });
 
 
-export { WorldScene };
+export default WorldScene;

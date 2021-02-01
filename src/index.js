@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import Preload from './js/preload';
 import BootScene from './js/boot';
-import { WorldScene, BattleScene, UIScene } from './js/world';
+import WorldScene from './js/world';
 
 const config = {
   type: Phaser.AUTO,
