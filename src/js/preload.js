@@ -16,7 +16,6 @@ export default class Preload extends Phaser.Scene {
       percentageFontSize: null,
       loadingText: null,
       completeValue: null,
-
       init(scene, x, y) {
         this.x = x;
         this.y = y;

@@ -13,6 +13,15 @@ class BootScene extends Phaser.Scene {
       },
     };
 
+    const addEvent = (value, whatToDo) => {
+      value.setInteractive()
+        .on('pointerdown', () => {
+          value.setStyle({
+            fill: 'fuchsia',
+          });
+        });
+    };
+
     this.button = {
       x: null,
       y: null,
@@ -27,6 +36,7 @@ class BootScene extends Phaser.Scene {
           fontFamily: 'monoscape',
           fontSize: 30,
         });
+        addEvent(this.text, message);
         this.text.setPadding(25, 15, 25, 15);
         this.text.setX(this.x - (this.text.width / 2));
         this.bgBox.fillRoundedRect(
@@ -46,12 +56,12 @@ class BootScene extends Phaser.Scene {
         );
         this.box.fillStyle(0x45feff);
         this.text.setInteractive();
-        this.text.on('pointerover', () => { console.log(this.text.width); });
       },
     };
 
 
     this.logo.init(this);
+
     this.button.init(400, 200, 'Start', this);
     this.button.init(400, 200 + 75, 'How to Play', this);
     this.button.init(400, 200 + 150, 'Sounds', this);
