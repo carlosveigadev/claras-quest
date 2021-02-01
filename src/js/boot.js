@@ -14,10 +14,20 @@ class BootScene extends Phaser.Scene {
     };
 
     const addEvent = (value, whatToDo) => {
-      value.setInteractive()
-        .on('pointerdown', () => {
+      value.setInteractive({ useHandCursor: true })
+        .on('pointerout', () => {
+          value.setStyle({
+            fill: 'white',
+          });
+        })
+        .on('pointerover', () => {
           value.setStyle({
             fill: 'fuchsia',
+          });
+        })
+        .on('pointerdown', () => {
+          value.setStyle({
+            fill: 'gray',
           });
         });
     };
@@ -55,7 +65,7 @@ class BootScene extends Phaser.Scene {
           10,
         );
         this.box.fillStyle(0x45feff);
-        this.text.setInteractive();
+        this.text.setInteractive({ useHandCursor: true });
       },
     };
 
@@ -67,6 +77,7 @@ class BootScene extends Phaser.Scene {
     this.button.init(400, 200 + 150, 'Sounds', this);
     this.button.init(400, 200 + 225, 'Credits', this);
     this.button.init(400, 200 + 300, 'Scores', this);
+    this.scene.start('WorldScene');
   }
 }
 

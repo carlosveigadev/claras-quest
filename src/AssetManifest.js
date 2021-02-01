@@ -7,7 +7,6 @@ const AssetManifest = {
     'girl_with_bow.png',
     'girl_with_sword.png',
     'girl_with_wand.png',
-    'girl.png',
     'spritesheet.png',
     'Tilesheet_snow.png',
     'Tilesheet-land-v5.png',
@@ -18,6 +17,9 @@ const AssetManifest = {
     'boot.mp3',
     'fight.mp3',
     'world.mp3',
+  ],
+  sprites: [
+    'girl.png',
   ],
 };
 
