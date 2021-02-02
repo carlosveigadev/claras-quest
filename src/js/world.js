@@ -13,15 +13,15 @@ const WorldScene = new Phaser.Class({
     this.player.body.setVelocity(0);
 
     if (this.cursors.left.isDown) {
-      this.player.body.setVelocityX(-80);
+      this.player.body.setVelocityX(-180);
     } else if (this.cursors.right.isDown) {
-      this.player.body.setVelocityX(80);
+      this.player.body.setVelocityX(180);
     }
 
     if (this.cursors.up.isDown) {
-      this.player.body.setVelocityY(-80);
+      this.player.body.setVelocityY(-180);
     } else if (this.cursors.down.isDown) {
-      this.player.body.setVelocityY(80);
+      this.player.body.setVelocityY(180);
     }
 
     if (this.cursors.left.isDown) {
