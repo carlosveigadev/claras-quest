@@ -99,6 +99,17 @@ const WorldScene = new Phaser.Class({
       }),
       repeat: -1,
     });
+    this.anims.create({
+      key: 'bounce',
+      frameRate: 5,
+      frames: this.anims.generateFrameNames('egg_red', {
+        prefix: 'egg_red-',
+        suffix: '.png',
+        start: 0,
+        end: 1,
+      }),
+      repeat: -1,
+    });
 
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.startFollow(this.player);
@@ -108,24 +119,16 @@ const WorldScene = new Phaser.Class({
 
     this.spawns = this.physics.add.group();
 
-    function getRandom(element) {
-      const elementNew = element[Math.floor(Math.random() * element.length)];
-      return elementNew;
-    };
-
     for (let i = 0; i < 30; i += 1) {
       const x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
       const y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
-      const possibleEggs = ['egg_blue', 'egg_red', 'egg_green'];
-      const eggs = this.spawns.create(x, y, getRandom(possibleEggs));
 
-      this.physics.add.overlap(this.player, eggs, this.onMeetEnemy, false, this);
-    };
+      this.eggs = this.spawns.create(x, y, 'egg_red');
+      this.eggs.setScale(0.5);
+      this.eggs.anims.play('bounce', true);
 
-    this.anims.create({
-      key: 'jump',
-      frameRate: 10,
-      repeat: -1,
+      this.physics.add.overlap(this.player, this.eggs, this.onMeetEnemy, false, this);
+    }
   },
 
   score: 0,
