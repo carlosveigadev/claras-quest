@@ -38,12 +38,12 @@ const WorldScene = new Phaser.Class({
   },
 
   create() {
-    const map = this.make.tilemap({ key: 'map' });
-    const terrain = map.addTilesetImage('Tilesheet-land-v5', 'Tilesheet-land-v5');
-    const sea = map.addTilesetImage('Tilesheet-water', 'Tilesheet-water');
-    map.createLayer('sea', sea, 0, 0);
+    const map = this.make.tilemap({ key: 'map2' });
+    const terrain = map.addTilesetImage('Serene_Village_32x32', 'Serene_Village_32x32');
     map.createLayer('terrain', terrain, 0, 0);
-    const obstacles = map.createLayer('tree', terrain, 0, 0);
+    map.createLayer('walk', terrain, 0, 0);
+
+    const obstacles = map.createLayer('objects', terrain, 0, 0);
     obstacles.setCollisionByExclusion([-1]);
 
     this.player = this.physics.add.sprite(50, 50, 'girl');
@@ -132,7 +132,7 @@ const WorldScene = new Phaser.Class({
   },
 
   score: 0,
-  onMeetEnemy(player, zone) {
+  onMeetEnemy(_player, zone) {
     zone.x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
     zone.y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
 

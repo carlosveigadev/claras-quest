@@ -1,8 +1,7 @@
 const AssetManifest = {
   images: [
     'logo.png',
-    'Tilesheet-land-v5.png',
-    'Tilesheet-water.png',
+    'Serene_Village_32x32.png',
   ],
   audio: [
     'boot.mp3',

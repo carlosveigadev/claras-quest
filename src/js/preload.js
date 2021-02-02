@@ -65,6 +65,7 @@ export default class Preload extends Phaser.Scene {
     this.progressBar.render();
     this.load.scenePlugin('WebpackLoader', WebpackLoader, 'loader', 'loader');
     this.load.tilemapTiledJSON('map', 'src/map/map.json');
+    this.load.tilemapTiledJSON('map2', 'src/map/map2.json');
   }
 
   create() {
