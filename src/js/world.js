@@ -129,17 +129,20 @@ const WorldScene = new Phaser.Class({
 
       this.physics.add.overlap(this.player, this.eggs, this.onMeetEnemy, false, this);
     }
+
+    this.score = 0;
+    this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
   },
 
-  score: 0,
+
   onMeetEnemy(_player, zone) {
     zone.x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
     zone.y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
 
     this.cameras.main.shake(300);
 
-    this.score += 1;
-    this.add.text(0, 0, this.score, { font: 'monoscape' });
+    this.score += 10;
+    this.scoreText.setText(`Score: ${this.score}`);
   },
 
 
