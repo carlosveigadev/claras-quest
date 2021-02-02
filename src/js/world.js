@@ -47,7 +47,7 @@ const WorldScene = new Phaser.Class({
     obstacles.setCollisionByExclusion([-1]);
 
     this.player = this.physics.add.sprite(50, 50, 'girl');
-    this.player.setScale(0.75);
+    this.player.setScale(0.8);
     this.physics.world.bounds.width = map.widthInPixels;
     this.physics.world.bounds.height = map.heightInPixels;
     this.player.setCollideWorldBounds(true);
@@ -111,16 +111,21 @@ const WorldScene = new Phaser.Class({
     function getRandom(element) {
       const elementNew = element[Math.floor(Math.random() * element.length)];
       return elementNew;
-    }
+    };
 
     for (let i = 0; i < 30; i += 1) {
       const x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
       const y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
       const possibleEggs = ['egg_blue', 'egg_red', 'egg_green'];
       const eggs = this.spawns.create(x, y, getRandom(possibleEggs));
-      eggs.setScale(0.5);
+
       this.physics.add.overlap(this.player, eggs, this.onMeetEnemy, false, this);
-    }
+    };
+
+    this.anims.create({
+      key: 'jump',
+      frameRate: 10,
+      repeat: -1,
   },
 
   score: 0,

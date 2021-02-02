@@ -3,9 +3,6 @@ const AssetManifest = {
     'logo.png',
     'Tilesheet-land-v5.png',
     'Tilesheet-water.png',
-    'egg_blue.png',
-    'egg_red.png',
-    'egg_green.png',
   ],
   audio: [
     'boot.mp3',
@@ -13,6 +10,7 @@ const AssetManifest = {
   ],
   sprites: [
     'girl.png',
+    'egg_red.png',
   ],
 };
 
