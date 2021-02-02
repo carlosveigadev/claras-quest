@@ -10,6 +10,12 @@ const WorldScene = new Phaser.Class({
   },
 
   update() {
+    const cam = this.cameras.main;
+    if (cam.scrollX > 0 || cam.scrollY > 0) {
+      this.scoreText.destroy();
+      this.scoreText = this.add.text(this.cameras.main.scrollX + 16, this.cameras.main.scrollY + 16, `score: ${this.score}`, { fontSize: '32px', fill: '#000' });
+    }
+
     this.player.body.setVelocity(0);
 
     if (this.cursors.left.isDown) {
@@ -40,10 +46,12 @@ const WorldScene = new Phaser.Class({
   create() {
     const map = this.make.tilemap({ key: 'map2' });
     const terrain = map.addTilesetImage('Serene_Village_32x32', 'Serene_Village_32x32');
+
     map.createLayer('terrain', terrain, 0, 0);
     map.createLayer('walk', terrain, 0, 0);
 
-    const obstacles = map.createLayer('objects', terrain, 0, 0);
+    const obstacles = map.createLayer('objects', terrain, 10, 10);
+
     obstacles.setCollisionByExclusion([-1]);
 
     this.player = this.physics.add.sprite(50, 50, 'girl');
@@ -139,7 +147,8 @@ const WorldScene = new Phaser.Class({
     zone.x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
     zone.y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
 
-    this.cameras.main.shake(300);
+    const cam = this.cameras.main;
+    cam.shake(100);
 
     this.score += 10;
     this.scoreText.setText(`Score: ${this.score}`);
