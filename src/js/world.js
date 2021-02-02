@@ -54,6 +54,7 @@ const WorldScene = new Phaser.Class({
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
+    // player anims
     this.anims.create({
       key: 'left',
       frameRate: 10,
@@ -95,6 +96,30 @@ const WorldScene = new Phaser.Class({
         suffix: '.png',
         start: 18,
         end: 26,
+      }),
+      repeat: -1,
+    });
+
+    // dino anims
+    this.anims.create({
+      key: 'left-dino',
+      frameRate: 10,
+      frames: this.anims.generateFrameNames('dinos', {
+        prefix: 'dinos_green-',
+        suffix: '.png',
+        start: 0,
+        end: 9,
+      }),
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'right-dino',
+      frameRate: 10,
+      frames: this.anims.generateFrameNames('dinos', {
+        prefix: 'dinos_green-',
+        suffix: '.png',
+        start: 0,
+        end: 9,
       }),
       repeat: -1,
     });
