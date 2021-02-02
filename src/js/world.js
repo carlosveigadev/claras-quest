@@ -129,7 +129,6 @@ const WorldScene = new Phaser.Class({
     zone.y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
 
     this.cameras.main.shake(300);
-    this.cameras.main.flash(300);
 
     this.score += 1;
     this.add.text(0, 0, this.score, { font: 'monoscape' });
