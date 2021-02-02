@@ -110,7 +110,6 @@ const WorldScene = new Phaser.Class({
 
     function getRandom(element) {
       const elementNew = element[Math.floor(Math.random() * element.length)];
-      console.log(typeof elementNew);
       return elementNew;
     }
 
@@ -133,7 +132,6 @@ const WorldScene = new Phaser.Class({
     this.cameras.main.flash(300);
 
     this.score += 1;
-    console.log(this.score);
     this.add.text(0, 0, this.score, { font: 'monoscape' });
   },
 
