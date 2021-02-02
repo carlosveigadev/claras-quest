@@ -108,12 +108,19 @@ const WorldScene = new Phaser.Class({
 
     this.spawns = this.physics.add.group();
 
+    function getRandom(element) {
+      const elementNew = element[Math.floor(Math.random() * element.length)];
+      console.log(typeof elementNew);
+      return elementNew;
+    }
+
     for (let i = 0; i < 30; i += 1) {
       const x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
       const y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
-
-      const dinos = this.spawns.create(x, y, 'dinos');
-      this.physics.add.overlap(this.player, dinos, this.onMeetEnemy, false, this);
+      const possibleEggs = ['egg_blue', 'egg_red', 'egg_green'];
+      const eggs = this.spawns.create(x, y, getRandom(possibleEggs));
+      eggs.setScale(0.5);
+      this.physics.add.overlap(this.player, eggs, this.onMeetEnemy, false, this);
     }
   },
 
