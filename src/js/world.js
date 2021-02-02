@@ -9,7 +9,7 @@ const WorldScene = new Phaser.Class({
     Phaser.Scene.call(this, { key: 'WorldScene' });
   },
 
-  update(time, delta) {
+  update() {
     this.player.body.setVelocity(0);
 
     if (this.cursors.left.isDown) {
