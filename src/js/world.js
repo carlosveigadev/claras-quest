@@ -11,9 +11,17 @@ const WorldScene = new Phaser.Class({
 
   update() {
     const cam = this.cameras.main;
+
+    const time = Math.round(100 - this.timedEvent.getProgress().toString().substr(0, 4) * 100);
+
+    this.timedEventTxt.setText(`Time: ${time}`);
+
     if (cam.scrollX > 0 || cam.scrollY > 0) {
       this.scoreText.destroy();
-      this.scoreText = this.add.text(this.cameras.main.scrollX + 16, this.cameras.main.scrollY + 16, `score: ${this.score}`, { fontSize: '32px', fill: '#000' });
+      this.scoreText = this.add.text(cam.scrollX + 16, cam.scrollY + 16, `Score: ${this.score}`, { fontSize: '32px', fill: '#000' });
+
+      this.timedEventTxt.destroy();
+      this.timedEventTxt = this.add.text(cam.scrollX + 625, cam.scrollY + 16, `Time: ${time}`, { fontSize: '32px', fill: '#000' });
     }
 
     this.player.body.setVelocity(0);
@@ -140,6 +148,10 @@ const WorldScene = new Phaser.Class({
 
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    this.timedEvent = this.time.delayedCall(40000, [], this);
+
+    this.timedEventTxt = this.add.text(625, 16, '', { fontSize: '32px', fill: '#000' });
   },
 
 
