@@ -100,30 +100,6 @@ const WorldScene = new Phaser.Class({
       repeat: -1,
     });
 
-    // dino anims
-    this.anims.create({
-      key: 'left-dino',
-      frameRate: 10,
-      frames: this.anims.generateFrameNames('dinos', {
-        prefix: 'dinos_green-',
-        suffix: '.png',
-        start: 0,
-        end: 9,
-      }),
-      repeat: -1,
-    });
-    this.anims.create({
-      key: 'right-dino',
-      frameRate: 10,
-      frames: this.anims.generateFrameNames('dinos', {
-        prefix: 'dinos_green-',
-        suffix: '.png',
-        start: 0,
-        end: 9,
-      }),
-      repeat: -1,
-    });
-
     this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
     this.cameras.main.startFollow(this.player);
     this.cameras.main.roundPixels = true;
