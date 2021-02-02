@@ -101,7 +101,7 @@ const WorldScene = new Phaser.Class({
     });
     this.anims.create({
       key: 'bounce',
-      frameRate: 5,
+      frameRate: 7,
       frames: this.anims.generateFrameNames('egg_red', {
         prefix: 'egg_red-',
         suffix: '.png',
@@ -125,7 +125,7 @@ const WorldScene = new Phaser.Class({
 
       this.eggs = this.spawns.create(x, y, 'egg_red');
       this.eggs.setScale(0.5);
-      this.eggs.anims.play('bounce', true);
+      this.eggs.anims.play({ key: 'bounce', repeatDelay: i * 10 });
 
       this.physics.add.overlap(this.player, this.eggs, this.onMeetEnemy, false, this);
     }
