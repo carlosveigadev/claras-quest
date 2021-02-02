@@ -149,6 +149,21 @@ const WorldScene = new Phaser.Class({
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
+    // add game over here...;
+    // request user name input;
+    // save to score data;
+    // implement api score;
+    // change scene (leaderboard)
+
+    // add songs;
+    // add leaderboard;
+    // add start button;
+    // add credits scene;
+    // add how to play;
+
+    // add tests;
+    // deploy to heroku;
+
     this.timedEvent = this.time.delayedCall(40000, [], this);
 
     this.timedEventTxt = this.add.text(625, 16, '', { fontSize: '32px', fill: '#000' });
