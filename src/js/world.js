@@ -105,17 +105,21 @@ const WorldScene = new Phaser.Class({
 
     this.physics.add.collider(this.player, obstacles);
 
-    this.spawns = this.physics.add.group();
+    // this.spawns = this.physics.add.group();
 
     function dinoCreator(x, y, sprite) {
-
+      const spawns = this.physics.add.group();
+      this.spawns.create(x, y, 'dinos');
     }
+
     for (let i = 0; i < 30; i += 1) {
       const x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
       const y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
-      this.spawns.create(x, y, 'dinos');
+      const dinos = dinoCreator(x, y);
+      return dinos;
+      // this.spawns.create(x, y, 'dinos');
     }
-    this.physics.add.overlap(this.player, this.spawns, this.onMeetEnemy, false, this);
+    this.physics.add.overlap(this.player, this.dinos, this.onMeetEnemy, false, this);
   },
 
   score: 0,
@@ -128,7 +132,10 @@ const WorldScene = new Phaser.Class({
 
     this.score += 1;
     console.log(this.score);
+    this.add.text(0, 0, this.score, { font: 'monoscape' });
   },
+
+
 });
 
 
