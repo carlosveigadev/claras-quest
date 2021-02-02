@@ -107,7 +107,9 @@ const WorldScene = new Phaser.Class({
 
     this.spawns = this.physics.add.group();
 
+    function dinoCreator(x, y, sprite) {
 
+    }
     for (let i = 0; i < 30; i += 1) {
       const x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
       const y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
@@ -115,6 +117,8 @@ const WorldScene = new Phaser.Class({
     }
     this.physics.add.overlap(this.player, this.spawns, this.onMeetEnemy, false, this);
   },
+
+  score: 0,
   onMeetEnemy(player, zone) {
     zone.x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
     zone.y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
@@ -122,7 +126,8 @@ const WorldScene = new Phaser.Class({
     this.cameras.main.shake(300);
     this.cameras.main.flash(300);
 
-    this.scene.switch('BattleScene');
+    this.score += 1;
+    console.log(this.score);
   },
 });
 
