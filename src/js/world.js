@@ -105,11 +105,13 @@ const WorldScene = new Phaser.Class({
 
     this.physics.add.collider(this.player, obstacles);
 
-    this.spawns = this.physics.add.group({ classType: Phaser.GameObjects.Zone });
+    this.spawns = this.physics.add.group();
+
+
     for (let i = 0; i < 30; i += 1) {
       const x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
       const y = Phaser.Math.RND.between(50, this.physics.world.bounds.height - 50);
-      this.spawns.create(x, y, 20, 20);
+      this.spawns.create(x, y, 'dinos');
     }
     this.physics.add.overlap(this.player, this.spawns, this.onMeetEnemy, false, this);
   },
