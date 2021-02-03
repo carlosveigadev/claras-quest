@@ -22,13 +22,13 @@ const getScores = () => {
       holder.style.position = 'absolute';
       holder.style.width = '100%';
       holder.style.height = '100%';
-      holder.style.backgroundColor = 'rgba(0,0,0, 0.6)';
+      holder.style.backgroundColor = 'rgba(0,0,0, 0.8)';
       holder.style.top = '0';
 
       const scores = document.createElement('div');
       scores.style.width = '400px';
       scores.style.padding = '1em 1em ';
-      scores.style.backgroundColor = 'rgba(255,255,255, 0.8)';
+      scores.style.backgroundColor = 'rgba(86,70,186, 0.8)';
       scores.style.borderRadius = '1em';
       scores.classList = 'scores';
       scores.style.position = 'relative';
@@ -55,7 +55,7 @@ const getScores = () => {
       topScoresHeader.style.textShadow = '2px 2px #000';
 
       response.result.sort((a, b) => b.score - a.score);
-      for (let index = 0; index < 10; index += 1) {
+      for (let index = 0; index < 10 || index < response.result.length; index += 1) {
         const element = response.result[index];
         const scoreHolder = document.createElement('div');
         scoreHolder.style.padding = '10px';
