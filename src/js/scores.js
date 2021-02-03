@@ -55,7 +55,7 @@ const getScores = () => {
       topScoresHeader.style.textShadow = '2px 2px #000';
 
       response.result.sort((a, b) => b.score - a.score);
-      for (let index = 0; index < 10 || index < response.result.length; index += 1) {
+      for (let index = 0; index < 10 && index < response.result.length; index += 1) {
         const element = response.result[index];
         const scoreHolder = document.createElement('div');
         scoreHolder.style.padding = '10px';
@@ -64,10 +64,9 @@ const getScores = () => {
         const name = document.createElement('span');
         const score = document.createElement('span');
         name.style.fontWeight = '900';
-        name.innerHTML = element.user;
+        name.innerHTML = `${element.user}`;
         name.style.paddingRight = '0.5em';
         score.innerHTML = ` with ${element.score} egg points`;
-
         scoreHolder.append(name, score);
         scores.append(scoreHolder, closeButton);
       }
