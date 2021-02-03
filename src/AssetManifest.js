@@ -7,7 +7,6 @@ const AssetManifest = {
   ],
   audio: [
     'boot.mp3',
-    'world.mp3',
   ],
   sprites: [
     'girl.png',

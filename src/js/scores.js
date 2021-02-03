@@ -3,7 +3,7 @@ const addScores = (username, points) => {
     user: username,
     score: `${points}`,
   };
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/umvG0P0lK5DAo5FlE9Ry/scores', {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/IxWntZC9K69JO1ioC0mP/scores', {
     mode: 'cors',
     method: 'POST',
     body: JSON.stringify(data),
@@ -15,7 +15,7 @@ const addScores = (username, points) => {
 };
 
 const getScores = () => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/umvG0P0lK5DAo5FlE9Ry/scores', { mode: 'cors' })
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/IxWntZC9K69JO1ioC0mP/scores', { mode: 'cors' })
     .then((response) => response.json())
     .then((response) => {
       const holder = document.createElement('div');
