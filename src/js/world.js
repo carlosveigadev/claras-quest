@@ -149,8 +149,6 @@ const WorldScene = new Phaser.Class({
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-    // change scene (leaderboard)
-
     // add songs;
     // add leaderboard;
     // add start button;
@@ -165,6 +163,7 @@ const WorldScene = new Phaser.Class({
     // };
 
     this.timedEvent = this.time.delayedCall(3000, () => {
+      this.scene.pause();
       gameOver(this.score);
     }, [], this);
 
