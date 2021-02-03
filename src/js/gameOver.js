@@ -1,0 +1,15 @@
+import { addScores, getScores } from './scores';
+
+function gameOver(score) {
+  const inputBox = document.getElementById('utext');
+  inputBox.addEventListener('keyup', (e) => {
+    const username = inputBox.value;
+    if (e.key === 'Enter' && username !== '') {
+      addScores(username, score);
+      getScores();
+    }
+  });
+  inputBox.style.display = 'inline';
+}
+
+export default gameOver;

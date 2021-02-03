@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import gameOver from './gameOver';
 
 const WorldScene = new Phaser.Class({
   Extends: Phaser.Scene,
@@ -167,11 +168,12 @@ const WorldScene = new Phaser.Class({
 
     // };
 
-    this.timedEvent = this.time.delayedCall(40000, gameOver(this.score), [], this);
+    this.timedEvent = this.time.delayedCall(3000, () => {
+      gameOver(this.score);
+    }, [], this);
 
     this.timedEventTxt = this.add.text(625, 16, '', { fontSize: '32px', fill: '#000' });
   },
-
 
   onMeetEnemy(_player, zone) {
     zone.x = Phaser.Math.RND.between(50, this.physics.world.bounds.width - 50);
