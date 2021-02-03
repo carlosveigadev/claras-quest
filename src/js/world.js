@@ -149,10 +149,6 @@ const WorldScene = new Phaser.Class({
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
-    // add game over here...;
-    // request user name input;
-    // save to score data;
-    // implement api score;
     // change scene (leaderboard)
 
     // add songs;

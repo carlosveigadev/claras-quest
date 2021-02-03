@@ -22,28 +22,44 @@ const getScores = () => {
       holder.style.position = 'absolute';
       holder.style.width = '100%';
       holder.style.height = '100%';
-      holder.style.backgroundColor = 'red';
+      holder.style.backgroundColor = 'rgba(0,0,0, 0.6)';
       holder.style.top = '0';
       const scores = document.createElement('div');
       scores.style.width = '400px';
-      scores.style.border = '1px solid green';
+      scores.style.padding = '1em 1em ';
+      scores.style.backgroundColor = 'rgba(255,255,255, 0.6)';
+      scores.style.borderRadius = '1em';
       scores.classList = 'scores';
       scores.style.position = 'relative';
       scores.style.left = '35%';
+      scores.style.top = '0.5em';
+
+      const topScoresHeader = document.createElement('h2');
+      topScoresHeader.textContent = 'Top Scores';
+      topScoresHeader.style.marginLeft = '45%';
+      topScoresHeader.style.fontSize = '36px';
+      topScoresHeader.style.color = 'rgb(89, 70, 178)';
+      topScoresHeader.style.textShadow = '2px 2px #000';
+
       response.result.sort((a, b) => b.score - a.score);
       for (let index = 0; index < 10; index += 1) {
         const element = response.result[index];
-        const h1 = document.createElement('h1');
-        const p = document.createElement('p');
-        h1.innerHTML = element.user;
-        p.innerHTML = element.score;
-        h1.style.fontSize = 'small';
-        p.style.color = 'blue';
-        scores.appendChild(h1);
-        h1.appendChild(p);
+        const scoreHolder = document.createElement('div');
+        scoreHolder.style.padding = '10px';
+        scoreHolder.style.display = 'flex';
+        scoreHolder.style.justifyContent = 'center';
+        const name = document.createElement('span');
+        const score = document.createElement('span');
+        name.style.fontWeight = '900';
+        name.innerHTML = element.user;
+        name.style.paddingRight = '0.5em';
+        score.innerHTML = ` with ${element.score} egg points`;
+
+        scoreHolder.append(name, score);
+        scores.appendChild(scoreHolder);
       }
       document.body.append(holder);
-      holder.append(scores);
+      holder.append(topScoresHeader, scores);
     });
 };
 
