@@ -3,6 +3,7 @@ import Preload from './js/preload';
 import BootScene from './js/boot';
 import WorldScene from './js/world';
 import Credits from './js/credits';
+import Tutorial from './js/tutorial';
 
 const config = {
   type: Phaser.AUTO,
@@ -25,6 +26,7 @@ const config = {
     BootScene,
     WorldScene,
     Credits,
+    Tutorial,
   ],
 };
 

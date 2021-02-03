@@ -3,6 +3,7 @@ const AssetManifest = {
     'logo.png',
     'Serene_Village_32x32.png',
     'credits.png',
+    'tutorial.png',
   ],
   audio: [
     'boot.mp3',

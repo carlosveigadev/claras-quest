@@ -5,7 +5,7 @@ const menuItems = (item, scene, sound, creditsImg) => {
   if (item.text === 'Start') {
     scene.scene.start('WorldScene');
   } else if (item.text === 'How to Play') {
-    console.log('How to Play');
+    scene.scene.start('Tutorial');
   } else if (item.text === 'Sounds') {
     sound.setMute(true);
   } else if (item.text === 'Credits') {

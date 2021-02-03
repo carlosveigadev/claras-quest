@@ -84,7 +84,6 @@ class BootScene extends Phaser.Scene {
     this.button.init(400, 200 + 225, 'Credits', this);
     this.button.init(400, 200 + 300, 'Scores', this);
 
-
     sound.play();
   }
 }
