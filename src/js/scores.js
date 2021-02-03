@@ -24,15 +24,28 @@ const getScores = () => {
       holder.style.height = '100%';
       holder.style.backgroundColor = 'rgba(0,0,0, 0.6)';
       holder.style.top = '0';
+
       const scores = document.createElement('div');
       scores.style.width = '400px';
       scores.style.padding = '1em 1em ';
-      scores.style.backgroundColor = 'rgba(255,255,255, 0.6)';
+      scores.style.backgroundColor = 'rgba(255,255,255, 0.8)';
       scores.style.borderRadius = '1em';
       scores.classList = 'scores';
       scores.style.position = 'relative';
       scores.style.left = '35%';
       scores.style.top = '0.5em';
+
+      const closeButton = document.createElement('span');
+      closeButton.style.position = 'absolute';
+      closeButton.style.top = '10px';
+      closeButton.style.right = '10px';
+      closeButton.classList.add('delete');
+      closeButton.style.cursor = 'pointer';
+      closeButton.classList.toggle = 'close';
+      closeButton.innerHTML = '&times;';
+      closeButton.addEventListener('click', () => {
+        holder.remove();
+      });
 
       const topScoresHeader = document.createElement('h2');
       topScoresHeader.textContent = 'Top Scores';
@@ -56,7 +69,7 @@ const getScores = () => {
         score.innerHTML = ` with ${element.score} egg points`;
 
         scoreHolder.append(name, score);
-        scores.appendChild(scoreHolder);
+        scores.append(scoreHolder, closeButton);
       }
       document.body.append(holder);
       holder.append(topScoresHeader, scores);
