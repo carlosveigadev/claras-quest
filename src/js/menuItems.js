@@ -1,7 +1,7 @@
-import Phaser from 'phaser';
 import { getScores } from './scores';
+import credits from './credits';
 
-const menuItems = (item, scene, sound) => {
+const menuItems = (item, scene, sound, creditsImg) => {
   if (item.text === 'Start') {
     scene.scene.start('WorldScene');
   } else if (item.text === 'How to Play') {
@@ -9,7 +9,7 @@ const menuItems = (item, scene, sound) => {
   } else if (item.text === 'Sounds') {
     sound.setMute(true);
   } else if (item.text === 'Credits') {
-    console.log('credits');
+    scene.scene.start('Credits');
   } else if (item.text === 'Scores') {
     getScores();
   }

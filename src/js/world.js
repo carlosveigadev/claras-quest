@@ -150,7 +150,6 @@ const WorldScene = new Phaser.Class({
     this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
 
-    // add credits scene;
     // add how to play;
     // deploy to heroku;
     // add tests;
