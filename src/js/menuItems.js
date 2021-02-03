@@ -1,7 +1,6 @@
 import { getScores } from './scores';
-import credits from './credits';
 
-const menuItems = (item, scene, sound, creditsImg) => {
+const menuItems = (item, scene, sound) => {
   if (item.text === 'Start') {
     scene.scene.start('WorldScene');
   } else if (item.text === 'How to Play') {
