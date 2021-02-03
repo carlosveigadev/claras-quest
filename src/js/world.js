@@ -147,7 +147,7 @@ const WorldScene = new Phaser.Class({
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
 
-    this.timedEvent = this.time.delayedCall(600, () => {
+    this.timedEvent = this.time.delayedCall(40000, () => {
       this.scene.pause();
       gameOver(this.score);
     }, [], this);
@@ -167,6 +167,5 @@ const WorldScene = new Phaser.Class({
   },
 
 });
-
 
 export default WorldScene;
