@@ -70,7 +70,6 @@ const WorldScene = new Phaser.Class({
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    // player anims
     this.anims.create({
       key: 'left',
       frameRate: 10,
@@ -164,7 +163,11 @@ const WorldScene = new Phaser.Class({
     // add tests;
     // deploy to heroku;
 
-    this.timedEvent = this.time.delayedCall(40000, [], this);
+    // gameOver(score) {
+
+    // };
+
+    this.timedEvent = this.time.delayedCall(40000, gameOver(this.score), [], this);
 
     this.timedEventTxt = this.add.text(625, 16, '', { fontSize: '32px', fill: '#000' });
   },
@@ -180,7 +183,6 @@ const WorldScene = new Phaser.Class({
     this.score += 10;
     this.scoreText.setText(`Score: ${this.score}`);
   },
-
 
 });
 
