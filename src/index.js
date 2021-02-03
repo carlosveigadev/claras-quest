@@ -29,6 +29,5 @@ const config = {
     Tutorial,
   ],
 };
-
 const game = new Phaser.Game(config);
 game();
