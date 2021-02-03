@@ -7,6 +7,7 @@ function gameOver(score) {
     if (e.key === 'Enter' && username !== '') {
       addScores(username, score);
       getScores();
+      inputBox.style.display = 'none';
     }
   });
   inputBox.style.display = 'inline';
