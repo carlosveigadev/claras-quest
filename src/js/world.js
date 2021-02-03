@@ -58,9 +58,7 @@ const WorldScene = new Phaser.Class({
 
     map.createLayer('terrain', terrain, 0, 0);
     map.createLayer('walk', terrain, 0, 0);
-
     const obstacles = map.createLayer('objects', terrain, 10, 10);
-
     obstacles.setCollisionByExclusion([-1]);
 
     this.player = this.physics.add.sprite(50, 50, 'girl');

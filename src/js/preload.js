@@ -2,6 +2,8 @@ import Phaser from 'phaser';
 import WebpackLoader from 'phaser-webpack-loader';
 import AssetManifest from '../AssetManifest';
 
+const map = require('../map/map2.json');
+
 export default class Preload extends Phaser.Scene {
   preload() {
     this.progressBar = {
@@ -64,7 +66,8 @@ export default class Preload extends Phaser.Scene {
     this.progressBar.init(this, this.cameras.main.width / 2, this.cameras.main.height / 2);
     this.progressBar.render();
     this.load.scenePlugin('WebpackLoader', WebpackLoader, 'loader', 'loader');
-    this.load.tilemapTiledJSON('map2', 'src/map/map2.json');
+
+    this.load.tilemapTiledJSON('map2', map);
   }
 
   create() {
