@@ -1,4 +1,4 @@
-import { getScores } from './scores';
+import { logScores } from './scores';
 
 const menuItems = (item, scene, sound) => {
   if (item.text === 'Start') {
@@ -10,7 +10,7 @@ const menuItems = (item, scene, sound) => {
   } else if (item.text === 'Credits') {
     scene.scene.start('Credits');
   } else if (item.text === 'Scores') {
-    getScores();
+    logScores();
   }
 };
 

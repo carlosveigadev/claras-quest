@@ -1,4 +1,4 @@
-import { addScores, getScores } from './scores';
+import { addScores, logScores } from './scores';
 
 function gameOver(score) {
   const inputBox = document.getElementById('utext');
@@ -6,7 +6,7 @@ function gameOver(score) {
     const username = inputBox.value;
     if (e.key === 'Enter' && username !== '') {
       addScores(username, score);
-      getScores();
+      logScores();
       inputBox.style.display = 'none';
     }
   });
