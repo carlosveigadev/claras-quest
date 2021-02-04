@@ -29,6 +29,10 @@ This is a solo projects at the end of the of the Microverse Main Technical Curri
 
 [Video Demo Link](loom file)
 
+## **Game Design**
+
+[Here](GameDesign.md) you can find the objectives and plan to create the game.
+
 ## **Getting Started**
 
 Clone the repository clicking on "Clone or Download" and copy the given link. In your terminal, go to the folder where you want the project to be and use the following command:
