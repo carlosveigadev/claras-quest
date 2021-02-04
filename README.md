@@ -4,7 +4,7 @@ This is a solo projects at the end of the of the Microverse Main Technical Curri
 
 **A glimpse**
 
-![Clara's Quest Gif](app/assets/images/Palibot-Blog.gif)
+![Clara's Quest Gif](example.gif)
 
 
 ## **Built With**
