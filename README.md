@@ -27,7 +27,7 @@ This is a solo projects at the end of the of the Microverse Main Technical Curri
 
 ## **Video Link Demo**
 
-[Video Demo Link](https://www.loom.com/share/e1730768271e4f6a80ae9789fa22fa04))
+[Video Demo Link](https://www.loom.com/share/e1730768271e4f6a80ae9789fa22fa04)
 
 ## **Game Design**
 
