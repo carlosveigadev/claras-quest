@@ -49,7 +49,6 @@ class BootScene extends Phaser.Scene {
           value.setStyle({
             fill: 'gray',
           });
-          console.log(value);
           startScene(menuItems(value));
         });
     };
