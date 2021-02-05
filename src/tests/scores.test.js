@@ -26,8 +26,6 @@ describe('Should be able to send a username and a score value data to the api', 
           }),
         ]),
       );
-    }).catch(() => {
-
     });
   });
   test('The object should contain the created score', () => {
@@ -39,8 +37,6 @@ describe('Should be able to send a username and a score value data to the api', 
           }),
         ]),
       );
-    }).catch(() => {
-
     });
   });
 });
