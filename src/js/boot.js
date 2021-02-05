@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import menuItems from './menuItems';
+import { logScores } from './scores';
 
 class BootScene extends Phaser.Scene {
   constructor() {
@@ -18,6 +19,20 @@ class BootScene extends Phaser.Scene {
 
     const sound = this.sound.add('boot');
 
+    const startScene = (value) => {
+      if (value === 'WorldScene') {
+        this.scene.start(value);
+      } else if (value === 'Tutorial') {
+        this.scene.start('Tutorial');
+      } else if (value === 'Sounds') {
+        sound.setMute(true);
+      } else if (value === 'Credits') {
+        this.scene.start(value);
+      } else if (value === 'Scores') {
+        logScores();
+      }
+    };
+
     const addEvent = (value) => {
       value.setInteractive({ useHandCursor: true })
         .on('pointerout', () => {
@@ -34,7 +49,8 @@ class BootScene extends Phaser.Scene {
           value.setStyle({
             fill: 'gray',
           });
-          menuItems(value, this, sound);
+          console.log(value);
+          startScene(menuItems(value));
         });
     };
 

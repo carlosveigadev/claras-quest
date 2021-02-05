@@ -1,17 +1,16 @@
-import { logScores } from './scores';
-
-const menuItems = (item, scene, sound) => {
+const menuItems = (item) => {
   if (item.text === 'Start') {
-    scene.scene.start('WorldScene');
-  } else if (item.text === 'How to Play') {
-    scene.scene.start('Tutorial');
-  } else if (item.text === 'Sounds') {
-    sound.setMute(true);
-  } else if (item.text === 'Credits') {
-    scene.scene.start('Credits');
-  } else if (item.text === 'Scores') {
-    logScores();
+    return 'WorldScene';
+  } if (item.text === 'How to Play') {
+    return 'Tutorial';
+  } if (item.text === 'Sounds') {
+    return 'Sounds';
+  } if (item.text === 'Credits') {
+    return 'Credits';
+  } if (item.text === 'Scores') {
+    return 'Scores';
   }
+  return false;
 };
 
 export default menuItems;

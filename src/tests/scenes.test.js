@@ -1,9 +1,9 @@
 import BootScene from '../js/boot';
-import Credits from '../js/credits';
 import GameOver from '../js/gameOver';
 import menuItems from '../js/menuItems';
 import Tutorial from '../js/tutorial';
 import WorldScene from '../js/world';
+import Credits from '../js/credits';
 
 describe('Test phaser object scenes.', () => {
   test('All scenes must be functions', () => {
