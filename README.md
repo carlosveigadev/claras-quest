@@ -61,8 +61,8 @@ After that, open the folder with the code editor of your choice and follow the s
 👤 **Carlos Veiga**
 
 - Github: [@githubhandle](https://github.com/wrakc)
-- Twitter: [@twitterhandle](https://twitter.com/carlosveig)
-- Linkedin: [linkedin](https://linkedin.com/chveiga)
+- Twitter: [@twitterhandle](https://twitter.com/carlosveigadev)
+- Linkedin: [linkedin](https://linkedin.com/carlosveigadev)
 
 ## 🤝 **Contributing**
 
