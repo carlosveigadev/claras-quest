@@ -23,7 +23,7 @@ This is a solo projects at the end of the of the Microverse Main Technical Curri
 
 ## **Live Demo**
 
-[Live Demo Link](https://wrakc.github.io/claras-quest/)
+[Live Demo Link](https://carlosveigadev.github.io/claras-quest/)
 
 ## **Video Link Demo**
 
