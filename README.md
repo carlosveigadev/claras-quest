@@ -60,7 +60,7 @@ After that, open the folder with the code editor of your choice and follow the s
 
 👤 **Carlos Veiga**
 
-- Github: [@githubhandle](https://github.com/wrakc)
+- Github: [@githubhandle](https://github.com/carlosveigadev)
 - Twitter: [@twitterhandle](https://twitter.com/carlosveigadev)
 - Linkedin: [linkedin](https://linkedin.com/carlosveigadev)
 
