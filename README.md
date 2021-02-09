@@ -37,7 +37,7 @@ This is a solo projects at the end of the of the Microverse Main Technical Curri
 
 Clone the repository clicking on "Clone or Download" and copy the given link. In your terminal, go to the folder where you want the project to be and use the following command:
 
-`git clone https://github.com/wrakc/claras-quest.git`
+`git clone https://github.com/carlosveigadev/claras-quest`
 
 After that, open the folder with the code editor of your choice and follow the steps bellow.
 
